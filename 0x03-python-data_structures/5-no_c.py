@@ -7,4 +7,4 @@ def no_c(my_string):
             continue
         else:
             final = final + item
-        return final
+    return final
