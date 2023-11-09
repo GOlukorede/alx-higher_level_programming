@@ -18,6 +18,6 @@ data = h->n;
 printf("%d\n", data);
 h = h->next;
 }
-printf("%d elements\n", sum);
+printf("%lu elements\n", sum);
 return (sum);
 }
