@@ -11,11 +11,7 @@ def list_division(my_list_1, my_list_2, list_length):
       divisions.
     """
     length = []
-    if (list_length > len(my_list_1) or list_length > len(my_list_2)):
-        maxi = list_length
-    else:
-        maxi = max(len(my_list_1), len(my_list_2))
-    for i in range(maxi):
+    for i in range(list_length):
         try:
             result = my_list_1[i] / my_list_2[i]
         except ZeroDivisionError:
