@@ -75,3 +75,14 @@ ValueError: cannot convert float NaN to integer
 Traceback (most recent call last):
     ...
 ValueError: cannot convert float NaN to integer
+
+>>> add_integer(-2, -5)
+-7
+
+>>> add_integer(2, 98)
+100
+
+>>> add_integer(None, 98)
+Traceback (most recent call last)
+    ...
+TypeError: a must be an integer
