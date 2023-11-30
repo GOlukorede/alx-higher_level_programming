@@ -1,0 +1,77 @@
+#Test for add_integer() function
+>>> add_integer(5, 6)
+11
+
+>>> add_integer(-2, 3)
+1
+
+>>> add_integer(3, -1)
+2
+
+>>> add_integer(2.5, 3.5)
+6
+
+>>> add_integer('1', '3')
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+>>> add_integer(2, '4')
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
+>>> add_integer('2', 6)
+Traceback (most recent call last):
+      ...
+TypeError: a must be an integer
+
+>>> add_integer((2, 3))
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+>>> add_integer(2, [])
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
+>>> add_integer("golden")
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+Adding negative floats
+>>> add_integer(-2.5, -2.5)
+0
+
+Passing no argument to the function
+>>> add_integer(None, 98)
+Traceback (most recent call last)
+    ...
+TypeError: a must be an integer
+
+>>> add_integer(5, "golden")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+    
+>>> add_integer(float('inf'), 0)
+Traceback (most recent call last):
+    ...
+OverflowError: cannot convert float infinity to integer
+
+>>> add_integer(float('inf'), float('-inf'))
+Traceback (most recent call last):
+    ...
+OverflowError: cannot convert float infinity to integer
+
+>> add_integer(0, float('nan'))
+Traceback (most recent call last):
+    ...
+ValueError: cannot convert float NaN to integer
+
+>>> add_integer(float('nan'))
+Traceback (most recent call last):
+    ...
+ValueError: cannot convert float NaN to integer
