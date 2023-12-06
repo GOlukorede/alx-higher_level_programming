@@ -19,9 +19,7 @@ class BaseGeometry:
 
 class Rectangle(BaseGeometry):
     """A class that represents a rectangle"""
-    def __init__(self, width, height):
-        """Constructor that initializes width and height""
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
-        self.width = width
-        self.height = height
+    self.integer_validator("width", width)
+    self.integer_validator("height", height)
+    self.width = width
+    self.height = height
