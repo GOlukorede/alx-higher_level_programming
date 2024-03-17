@@ -1,20 +1,25 @@
 #!/usr/bin/python3
+"""
+This script lists all states from the
+database `hbtn_0e_0_usa`.
+"""
+
 import MySQLdb
 from sys import argv
 
-"""
- script that lists all states from the database hbtn_0e_0_usa
-"""
-
-if __name__ == "__nain__":
+if __name__ == '__main__':
     """
-    To access the database and list ass states
+    Access to the database and get the states
+    from the database.
     """
-  
-    mydb = MySQLdb.connect(host="localhost", username=argv[1], password=argv[2], db=argv[3] port=3306)
+    db_connect = MySQLdb.connect(
+        host="localhost", user=argv[1], port=3306, passwd=argv[2], db=argv[3])
 
-    mycursor = mydb.cursor()
-    mycursor.execute("SELECT * FROM states")
-    myresult = mycursor.fetchall()
-    for states in myresult:
-        print(states)
+    db_cursor = db_connect.cursor()
+
+    db_cursor.execute("SELECT * FROM states")
+
+    rows_selected = db_cursor.fetchall()
+
+    for row in rows_selected:
+        print(row)
